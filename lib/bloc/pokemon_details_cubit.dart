@@ -5,14 +5,14 @@ import 'package:poke_app/data/pokemon_repository.dart';
 import 'package:poke_app/data/pokemon_species_info_response.dart';
 
 class PokemonDetailCubit extends Cubit<PokemonDetails?> {
-  final _pokemonrepository = PokemonRepository();
+  final _pokemonRepository = PokemonRepository();
 
   PokemonDetailCubit() : super(null);
 
   getPokemonDetails(int pokemonId) async {
     final response = await Future.wait([
-      _pokemonrepository.getPokemonInfo(pokemonId),
-      _pokemonrepository.getPokemonSpeciesInfo(pokemonId)
+      _pokemonRepository.getPokemonInfo(pokemonId),
+      _pokemonRepository.getPokemonSpeciesInfo(pokemonId)
     ]);
 
     final pokemonInfo = response[0] as PokemonInfoResponse;

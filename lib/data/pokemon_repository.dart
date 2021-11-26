@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:poke_app/data/pokemon_info.dart';
 import 'package:poke_app/data/pokemon_page_rsponse.dart';
 import 'package:poke_app/data/pokemon_species_info_response.dart';
 
